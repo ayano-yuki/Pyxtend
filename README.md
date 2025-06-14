@@ -6,7 +6,6 @@ Python に Swift の `extension` のような機能を追加する軽量ライ�
 ## 📦 特徴
 - ✅ Swift風の自然な構文でクラス拡張が可能
 - ✅ `@extend(SomeClass)` のシンプルなAPI
-- ✅ 組み込み型（`str`, `list` など）や自作クラスも対象にできる
 - ✅ Python 3.8 以降対応
 
 
@@ -61,12 +60,11 @@ pytest
 ### ModuleNotFoundError: No module named 'pyxtend' の対処法
 `pip install -e .` を使って、pyxtendを開発モードインストールする。このコマンドを使うことで、プロジェクトのソースコードをインストール先にコピーせずに、編集内容が即座に反映される状態でパッケージを利用できる。
 ```sh
-python -m venv .venv
 
 # Windows
 . .venv\Scripts\activate
 # macOS/Linux
-source .venv/bin/activate
+source .venv\Scripts\activate
 
 uv pip install -e .
 ```
