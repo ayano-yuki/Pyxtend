@@ -1,0 +1,9 @@
+[project]
+name = "pyxtend"
+version = "0.1.0"
+description = "Swift-like extension support for Python via decorators"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "pytest>=8.4.0",
+]
