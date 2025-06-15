@@ -14,7 +14,7 @@ def test_extend_adds_method():
 
     user = User("田中")
     assert user.greet() == "こんにちは、田中さん！"
-    assert "greet" in User.__extensions__
+    assert "greet" in User.__pyxtend_extensions__
 
 # 異常系：非クラス型を渡す
 def test_extend_with_non_type_raises():
@@ -58,4 +58,4 @@ def test_extend_multiple_methods():
     a = Animal("ねこ")
     assert a.speak() == "ねこ が鳴いた！"
     assert a.run() == "ねこ が走った！"
-    assert Animal.__extensions__ == ["speak", "run"]
+    assert Animal.__pyxtend_extensions__ == ["speak", "run"]

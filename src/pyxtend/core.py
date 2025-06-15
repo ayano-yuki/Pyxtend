@@ -23,9 +23,9 @@ def extend(cls):
             )
         setattr(cls, func.__name__, func)
 
-        if not hasattr(cls, '__extensions__'):
-            cls.__extensions__ = []
-        cls.__extensions__.append(func.__name__)
+        if not hasattr(cls, '__pyxtend_extensions__'):
+            cls.__pyxtend_extensions__ = []
+        cls.__pyxtend_extensions__.append(func.__name__)
         
         return func
     return decorator
